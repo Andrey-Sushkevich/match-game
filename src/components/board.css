@@ -1,0 +1,10 @@
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: lightgray;
+  border: 1px solid black;
+  width: 500px;
+  margin: 0 auto;
+  justify-content: center;
+  border-radius: 8px;
+}
