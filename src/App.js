@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Score from "./components/Score";
 import Board from "./components/Board";
+import Timer from "./components/Timer"
 import "./styles.css";
 import { ScoreProvider } from "./scoreContext";
+
+
 let numCards = 16;
 export default function App() {
   const [score, setScore] = useState(0);
@@ -12,8 +15,12 @@ export default function App() {
   const [matchesArray, setMatchesArray] = useState([]);
 
   return (
+
+
+ 
     <div className="App" key={appKey}>
       <h1>Memory Game</h1>
+      <Timer />
       <ScoreProvider
         value={{
           score: score,
@@ -44,6 +51,7 @@ export default function App() {
       >
         <Score />
         <Board />
+
       </ScoreProvider>
     </div>
   );

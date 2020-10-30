@@ -34,10 +34,7 @@ const flipCard = (event, value) => {
     window.setTimeout(() => {
       if (isMatchFound(isMatch)) {
         isMatch.forEach((element) => {
-          element.setAttribute(
-            "src",
-            "https://stayfurnished.com/skin/frontend/default/stylish/images/bg.png"
-          );
+          element.setAttribute( "src","https://stayfurnished.com/skin/frontend/default/stylish/images/bg.png" );
           value.updateMatchesArray(element.getAttribute("data-index"));
         });
         value.updateScore();
@@ -45,7 +42,6 @@ const flipCard = (event, value) => {
         isMatch.forEach((element) =>
           element.setAttribute("src", constants.blueBGurl)
         );
- 
       }
       isMatch = [];
     }, 1000);

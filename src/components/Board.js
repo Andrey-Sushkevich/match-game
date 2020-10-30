@@ -3,7 +3,6 @@ import { Card } from "./Card.js";
 import { ScoreConsumer } from "../scoreContext";
 import "./board.css";
 
-
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
@@ -30,9 +29,6 @@ const makeCards = (num) => {
       <Card key={randomArray[i].toString()} index={randomArray[i]} />
     );
   }
-
-  console.log("making cards");
-
   return results;
 };
 
@@ -40,6 +36,7 @@ let numCards = 16;
 let cards = makeCards(numCards);
 const Board = () => {
   return (
+  
     <ScoreConsumer>
       {(value) => {
         return (
